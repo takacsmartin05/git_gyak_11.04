@@ -1,0 +1,54 @@
+main{
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    grid-template-areas: "h h"
+                        " n n" 
+                        "s as"
+                        "ar as"
+                        " f f";                
+}
+header{
+    grid-area: h;
+    background-color: antiquewhite;
+}
+
+nav{
+    grid-area: n;
+    background-color: brown;
+}
+
+article{
+    grid-area: ar;
+    background-color: aqua;
+}
+
+aside{
+    grid-area: as;
+    background-color: azure;
+}
+
+footer{
+    grid-area: f;
+    background-color: chartreuse;
+}
+
+@media screen and (max-width:800px){
+     main {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "h h "
+                        " n n"
+                        "ar as" 
+                        " f f ";                
+}
+    }
+
+@media screen and (max-width:600px){
+     main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "h "
+                        " n"
+                        "ar"
+                        "as" 
+                        " f ";                
+}
+    }
